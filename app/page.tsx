@@ -1,4 +1,5 @@
 import Slider from "@/components/Slider";
+import GridCard from "@/components/GridCard";
 
 const gridElements = [
   {
@@ -41,62 +42,28 @@ export default function Home() {
       <section className="py-24">
         <div className="mx-auto max-w-6xl px-6">
 
-          {/* ROW 1 — 3 GRID ELEMENTS */}
+          {/* ROW 1 — 3 ITEMS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {gridElements.slice(0, 3).map((item, index) => (
-              <div
+              <GridCard
                 key={index}
-                className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-xl"
-              >
-                {/* IMAGE — FIXED HEIGHT */}
-                <div className="relative h-52 w-full overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-
-                {/* CONTENT — FIXED HEIGHT */}
-                <div className="flex h-25 flex-col justify-center bg-gradient-to-b from-[#484848] to-[#2c2c2c] p-6">
-                  <h3 className="mb-2 text-lg font-semibold text-[#f06500]">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-[#f06500]/80">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
+                title={item.title}
+                description={item.description}
+                image={item.image}
+              />
             ))}
           </div>
 
-          {/* ROW 2 — 2 GRID ELEMENTS CENTERED */}
+          {/* ROW 2 — 2 ITEMS CENTERED */}
           <div className="mx-auto mt-12 max-w-4xl">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {gridElements.slice(3).map((item, index) => (
-                <div
+                <GridCard
                   key={index}
-                  className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-xl"
-                >
-                  {/* IMAGE — FIXED HEIGHT */}
-                  <div className="relative h-52 w-full overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
-
-                  {/* CONTENT — FIXED HEIGHT */}
-                  <div className="flex h-25 flex-col justify-center bg-gradient-to-b from-[#484848] to-[#2c2c2c] p-6">
-                    <h3 className="mb-2 text-lg font-semibold text-[#f06500]">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-[#f06500]/80">
-                      {item.description}
-                    </p>
-                  </div>
-                </div>
+                  title={item.title}
+                  description={item.description}
+                  image={item.image}
+                />
               ))}
             </div>
           </div>

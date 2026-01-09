@@ -79,15 +79,15 @@ export default function Slider() {
     w-screen
     animate-fade-up
     px-8 py-6 md:py-5
-    bg-gradient-to-b from-[#484848]/35 to-[#2c2c2c]/35
+    bg-[#4a4a4a]/25
     backdrop-blur-[2px]
   "
               >
                 <div className="mx-auto max-w-5xl px-4 text-center flex flex-col items-center justify-center">
-                  <h1 className="mb-2 text-3xl sm:text-4xl md:text-5xl font-bold text-[#f06500] drop-shadow-md">
+                  <h1 className="mb-2 text-3xl sm:text-4xl md:text-5xl font-bold text-[#fff] drop-shadow-md">
                     {slide.title}
                   </h1>
-                  <p className="text-base sm:text-lg md:text-xl text-[#f06500]/80 drop-shadow">
+                  <p className="text-base sm:text-lg md:text-xl text-[#fff]/80 drop-shadow">
                     {slide.text}
                   </p>
                 </div>
