@@ -11,7 +11,7 @@ const menuItems = [
     { name: "About Us", href: "/about-us" },
     { name: "Products & Services", href: "/products-services" },
     { name: "Quality", href: "/quality" },
-    { name: "Contact & Career", href: "/contact-career" },
+    { name: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Header() {
@@ -52,7 +52,7 @@ export default function Header() {
                                     onClick={createRipple}
                                     className={`
                     relative overflow-hidden
-                    rounded-full px-5 py-2.5
+                    rounded-xl px-5 py-2.5
                     text-base font-semibold uppercase
                     transition-all duration-300
                     ${active

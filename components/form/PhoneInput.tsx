@@ -48,10 +48,9 @@ export default function PhoneNumberInput({
             smartCaret={false}
             className={`
               flex
-              rounded-md
+              rounded-xl
               border
-              px-3
-              py-2
+              px-4 py-3
               bg-zinc-50
               dark:bg-[#1f1f1f]
               border-zinc-300

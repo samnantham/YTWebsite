@@ -1,17 +1,42 @@
 "use client";
 
+import { FaSpinner } from "react-icons/fa";
+
 type Props = {
   loading: boolean;
+  label?: string;
 };
 
-export default function SubmitButton({ loading }: Props) {
+export default function SubmitButton({
+  loading,
+  label = "Submit",
+}: Props) {
   return (
     <button
       type="submit"
       disabled={loading}
-      className="bg-gradient-to-b from-[#484848] to-[#2c2c2c] text-[#f06500] px-4 py-2 rounded text-base font-semibold"
+      className="
+        inline-flex items-center justify-center gap-2
+        rounded-xl
+        bg-gradient-to-b from-[#484848] to-[#2c2c2c]
+        px-6 py-3
+        text-base font-semibold
+        text-[#f06500]
+        transition
+        hover:opacity-90
+        disabled:cursor-not-allowed
+        disabled:opacity-70
+      "
     >
-      {loading ? "Sending..." : "Send Message"}
+      {loading ? (
+        <FaSpinner
+          className="animate-spin text-[#f06500]"
+          size={18}
+          aria-label="Loading"
+        />
+      ) : (
+        label
+      )}
     </button>
   );
 }
