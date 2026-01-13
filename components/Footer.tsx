@@ -43,9 +43,7 @@ const footerNav = [
 
 export default function Footer() {
   return (
-    <footer className="mt-24">
-
-      {/* FOOTER NAV SECTION (ORANGE BG) */}
+    <footer>
       <div className="bg-gradient-to-b from-[#fd9900] to-[#ea6001]">
         <div className="mx-auto max-w-7xl px-6 py-14">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -61,12 +59,7 @@ export default function Footer() {
                     <li key={link.name}>
                       <Link
                         href={link.href}
-                        className="
-      group flex items-center gap-2
-      text-white/90 transition
-      hover:text-[#2c2c2c] hover:font-bold
-    "
-                      >
+                        className="group flex items-center gap-2 text-white/90 transition hover:text-[#2c2c2c] hover:font-bold">
                         <FaChevronRight
                           size={12}
                           className="text-[#2c2c2c]"

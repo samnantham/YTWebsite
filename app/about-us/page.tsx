@@ -1,36 +1,13 @@
 "use client";
 
-import { motion, Variants  } from "framer-motion";
+import { motion  } from "framer-motion";
 import Image from "next/image";
 
-/* =======================
-   ANIMATION VARIANTS
-======================= */
-
-const bannerVariant: Variants = {
-  hidden: { opacity: 0, y: 80 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.16, 1, 0.3, 1], // cubic-bezier (easeOut)
-    },
-  },
-};
-const leftVariant = {
-  hidden: { opacity: 0, x: -80 },
-  visible: { opacity: 1, x: 0 },
-};
-
-const rightVariant = {
-  hidden: { opacity: 0, x: 80 },
-  visible: { opacity: 1, x: 0 },
-};
-
-/* =======================
-   CONTENT DATA
-======================= */
+import {
+  bannerVariant,
+  slideLeft,
+  slideRight,
+} from "@/lib/animations";
 
 const sections = [
   {
@@ -123,7 +100,7 @@ export default function AboutUsPage() {
             return (
               <motion.div
                 key={index}
-                variants={isEven ? rightVariant : leftVariant}
+                variants={isEven ? slideRight : slideLeft}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
